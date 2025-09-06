@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({
-  origin: '*', 
+  origin: 'https://auth-app-an81.onrender.com', 
   credentials: true
 }));
 
