@@ -26,7 +26,7 @@ function App() {
 
   const checkAuthStatus = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/user', { withCredentials: true });
+      const response = await axios.get('https://auth-5jrm.onrender.com/api/user', { withCredentials: true });
       setIsLoggedIn(true);
       setUser(response.data);
     } catch (error: any) {
@@ -39,7 +39,7 @@ function App() {
     e.preventDefault();
     setError('');
     try {
-      const endpoint = isRegistering ? 'http://localhost:5000/api/register' : 'http://localhost:5000/api/login';
+      const endpoint = isRegistering ? 'https://auth-5jrm.onrender.com/api/register' : 'https://auth-5jrm.onrender.com/api/login';
       await axios.post(endpoint, { email, password }, { withCredentials: true });
       await checkAuthStatus();
       setEmail('');
@@ -51,7 +51,7 @@ function App() {
 
   const handleLogout = async () => {
     try {
-      await axios.post('http://localhost:5000/api/logout', {}, { withCredentials: true });
+      await axios.post('https://auth-5jrm.onrender.com/api/logout', {}, { withCredentials: true });
       setIsLoggedIn(false);
       setUser(null);
     } catch (error: any) {
