@@ -20,7 +20,7 @@ app.use(express.json());
 // session configuration
 app.use(session({
   name: 'session',
-  keys: ['fc201cdef22df74efcb241a1eab230ce8d4915445bb970d7f2b04593050fbd76'],
+  keys: ['a31113f95ac74d1c34a24cfe62dbdac69dbce2c3597f5a2bc38919b1bdd2c542'],
   maxAge: 24 * 60 * 60 * 1000, // 24 hours
   httpOnly: true,
   sameSite: 'lax' 
